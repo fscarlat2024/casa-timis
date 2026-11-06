@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Casa Timiș</title>
+<meta name="description" content="Prezentare pentru telefon: Casa Timiș Wellness & Spa Resort, Dealu Mare.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1A0F13">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Casa Timiș">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="poze/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Hanken+Grotesk:wght@400;500;600&display=swap">
+<style>
+/* Ecrane foto pe toată înălțimea, derulate pagină cu pagină; textul stă jos, deasupra meniului. */
+:root{
+  --vin:#1A0F13; --vin2:#26151B; --hartie:#F7F1E6; --stins:#D2C7BB; --aur:#E0BC7C; --linie:rgba(247,241,230,.22);
+  --titlu:"Cormorant Garamond","Iowan Old Style",Georgia,serif;
+  --text:"Hanken Grotesk","Segoe UI",system-ui,sans-serif;
+  --meniu:64px; color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%;background:#0D0709;color:var(--hartie);font-family:var(--text);-webkit-font-smoothing:antialiased}
+.tel{position:relative;height:100dvh;max-width:480px;margin:0 auto;background:var(--vin);overflow:hidden}
+main{height:100%;overflow-y:auto;scroll-snap-type:y mandatory;scrollbar-width:none;overscroll-behavior:contain}
+main::-webkit-scrollbar,.rola::-webkit-scrollbar{display:none}
+.ecran{position:relative;height:100dvh;scroll-snap-align:start;scroll-snap-stop:always;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;
+  padding:0 max(22px,env(safe-area-inset-right)) calc(var(--meniu) + env(safe-area-inset-bottom) + 26px) max(22px,env(safe-area-inset-left))}
+.foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:apropiere 16s ease-out both}
+@keyframes apropiere{from{transform:scale(1.07)}to{transform:scale(1)}}
+.ecran::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,15,19,.34) 0,rgba(26,15,19,0) 18%,rgba(26,15,19,0) 42%,rgba(26,15,19,.82) 66%,var(--vin) 92%)}
+.continut{position:relative;z-index:1;display:grid;gap:14px;min-width:0}
+.et{font-size:12px;font-weight:600;letter-spacing:.17em;text-transform:uppercase;color:var(--aur)}
+h1,h2{font-family:var(--titlu);font-weight:500;text-wrap:balance}
+h1{font-size:clamp(58px,18vw,78px);line-height:.95}
+h2{font-size:clamp(36px,10vw,44px);line-height:1.04}
+p{font-size:16.5px;line-height:1.5;max-width:40ch}
+.sus{position:absolute;z-index:2;top:calc(env(safe-area-inset-top) + 18px);left:22px;right:22px;display:flex;justify-content:space-between;gap:14px;font-size:11.5px;letter-spacing:.1em;color:var(--hartie);text-shadow:0 1px 8px rgba(0,0,0,.65)}
+.indiciu{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--stins)}
+.indiciu svg{animation:plutire 2.2s ease-in-out infinite}
+@keyframes plutire{50%{transform:translateY(4px)}}
+.cifre{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px;padding-top:14px;border-top:1px solid var(--linie)}
+.cifre b{display:block;font-family:var(--titlu);font-weight:500;font-size:34px;line-height:1.05;color:var(--aur);font-variant-numeric:lining-nums tabular-nums}
+.cifre span{font-size:13.5px;color:var(--stins);line-height:1.35}
+.lista{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0}
+.lista li{font-size:14px;padding:7px 12px;border:1px solid var(--linie);border-radius:99px;background:rgba(26,15,19,.5)}
+/* Camere: rolă laterală în loc de o singură fotografie */
+.camere{padding:calc(env(safe-area-inset-top) + 24px) 0 calc(var(--meniu) + env(safe-area-inset-bottom) + 22px);justify-content:flex-start;gap:16px;background:var(--vin2)}
+.camere::after{display:none}
+.camere .cap{padding:0 22px;display:grid;gap:9px}
+.rola{flex:1 1 auto;min-height:0;display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:0 22px;scroll-padding:0 22px}
+.rola figure{flex:0 0 86%;scroll-snap-align:start;position:relative;border-radius:4px;overflow:hidden;margin:0;min-height:0}
+.rola img{width:100%;height:100%;object-fit:cover;display:block}
+.rola figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 14px 12px;font-size:13.5px;background:linear-gradient(180deg,transparent,rgba(26,15,19,.82))}
+.camere .lista{padding:0 22px}
+/* Contact */
+.tele{display:grid;gap:0;border-top:1px solid var(--linie)}
+.tele a{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:46px;color:var(--hartie);text-decoration:none;border-bottom:1px solid var(--linie);font-size:15px}
+.tele b{font-weight:500;color:var(--aur);font-variant-numeric:tabular-nums;white-space:nowrap}
+.tele a:focus-visible,.nota a:focus-visible{outline:2px solid var(--aur);outline-offset:2px}
+.nota{font-size:12px;color:var(--stins);line-height:1.45}
+.nota a{color:inherit}
+/* Meniu */
+nav{position:absolute;z-index:5;left:0;right:0;bottom:0;display:grid;grid-template-columns:repeat(5,1fr);height:calc(var(--meniu) + env(safe-area-inset-bottom));padding-bottom:env(safe-area-inset-bottom);background:rgba(26,15,19,.84);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);border-top:1px solid var(--linie)}
+nav a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:11px;color:var(--stins);text-decoration:none;-webkit-tap-highlight-color:transparent}
+nav svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+nav a.activ{color:var(--aur)}
+nav a:focus-visible{outline:2px solid var(--aur);outline-offset:-4px}
+@media (prefers-reduced-motion:reduce){.foto,.indiciu svg{animation:none}main{scroll-behavior:auto}}
+@media (max-height:680px){h1{font-size:52px}h2{font-size:32px}p{font-size:15px}.cifre b{font-size:28px}.continut{gap:10px}.lista li{font-size:13px;padding:5px 10px}}
+</style>
+</head>
+<body>
+<div class="tel">
+<main id="ecrane">
+
+  <section class="ecran" id="acasa">
+    <img class="foto" src="poze/conac-apus.jpg" alt="Conacul cu acoperiș de țiglă și turn alb, la apus, cu viile în spate" style="object-position:40% 50%">
+    <div class="sus"><span>DEALU MARE</span><span>PREZENTARE NEOFICIALĂ</span></div>
+    <div class="continut">
+      <div class="et">Wellness &amp; Spa Resort</div>
+      <h1>Casa Timiș</h1>
+      <p>Refugiu boieresc între vii, unde tradiția românească, luxul autentic și liniștea se întâlnesc.</p>
+      <div class="indiciu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 6l5 5 5-5"/></svg>Glisează în sus</div>
+    </div>
+  </section>
+
+  <section class="ecran" id="domeniul">
+    <img class="foto" loading="lazy" src="poze/domeniu-lac.jpg" alt="Domeniul văzut de sus: lac, alei și vii până la orizont">
+    <div class="continut">
+      <div class="et">Domeniul</div>
+      <h2>O regiune viticolă cu istorie din jurul anului 1400</h2>
+      <div class="cifre">
+        <div><b>15 ha</b><span>viță veche</span></div>
+        <div><b>11 ha</b><span>livadă de pomi fructiferi</span></div>
+        <div><b>9 ha</b><span>struguri de masă</span></div>
+        <div><b>3</b><span>lacuri cu nuferi și crapi Koi</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ecran" id="bungalow">
+    <img class="foto" loading="lazy" src="poze/bungalow-lac.jpg" alt="Bungalow-uri albe cu arcade, luminate la apus, deasupra unui lac" style="object-position:34% 50%">
+    <div class="continut">
+      <div class="et">Cazare</div>
+      <h2>Bungalow-uri cu nume de vin</h2>
+      <p>Fiecare poartă numele unui soi și are propriile picturi murale, între lacuri și vii.</p>
+      <ul class="lista">
+        <li>Merlot</li><li>Aligote</li><li>Fetească Regală</li><li>Fetească Neagră</li><li>Tămâioasa Românească</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="ecran camere" id="camere">
+    <div class="cap">
+      <div class="et">Interior</div>
+      <h2>Fiecare cameră are decorul ei</h2>
+    </div>
+    <div class="rola" tabindex="0" aria-label="Fotografii din camere, glisează lateral">
+      <figure><img loading="lazy" src="poze/bungalow-mural.jpg" alt="Dormitor cu pat roz și pictură murală cu foișor" style="object-position:62% 50%"><figcaption>Bungalow, cu pictură murală</figcaption></figure>
+      <figure><img loading="lazy" src="poze/conac-apartament.jpg" alt="Dormitor la mansardă cu tapet floral verde și pat cu tăblie oranj" style="object-position:40% 50%"><figcaption>Apartament în Conac</figcaption></figure>
+      <figure><img loading="lazy" src="poze/bungalow-auriu.jpg" alt="Dormitor cu două paturi cu cuverturi aurii, sub o arcadă" style="object-position:52% 50%"><figcaption>Bungalow, în tonuri de chihlimbar</figcaption></figure>
+      <figure><img loading="lazy" src="poze/conac-galben.jpg" alt="Fotoliu galben lângă fereastră cu draperii în carouri" style="object-position:45% 50%"><figcaption>Cameră în Conac</figcaption></figure>
+      <figure><img loading="lazy" src="poze/bungalow-terasa.jpg" alt="Terasa acoperită a unui bungalow, cu ușă rotundă verde" style="object-position:56% 50%"><figcaption>Terasă privată de bungalow</figcaption></figure>
+    </div>
+    <ul class="lista">
+      <li>Camere duble și twin</li><li>Junior Suite</li><li>Bungalow Suită</li><li>Apartamente</li>
+    </ul>
+  </section>
+
+  <section class="ecran" id="spa">
+    <img class="foto" loading="lazy" src="poze/spa-sezlong.jpg" alt="Doi oaspeți în halate, pe șezlonguri suspendate, ținându-se de mână" style="object-position:24% 50%">
+    <div class="continut">
+      <div class="et">Embrace Holistic Healing Spa</div>
+      <h2>Un sanctuar al echilibrului</h2>
+      <ul class="lista">
+        <li>Saună umedă cu haloterapie</li><li>Saună cu sare de Himalaya</li><li>Saună panoramică</li><li>Fântână de gheață</li><li>Șezlonguri cu infraroșu</li><li>Fitness</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="ecran" id="piscina">
+    <img class="foto" loading="lazy" src="poze/piscina.jpg" alt="Piscină exterioară turcoaz, cu șezlonguri și umbrele, sub cer senin">
+    <div class="continut">
+      <div class="et">Infinity Pool &amp; Jacuzzi</div>
+      <h2>Vara se trăiește lângă apă</h2>
+      <p>Piscină și jacuzzi exterioare încălzite, deschise din mai până în octombrie.</p>
+    </div>
+  </section>
+
+  <section class="ecran" id="veranda">
+    <img class="foto" loading="lazy" src="poze/veranda.jpg" alt="Restaurant luminos, cu scaune galbene și plante, deschis spre vii">
+    <div class="continut">
+      <div class="et">Veranda dintre Vii</div>
+      <h2>Un acoperiș care se deschide spre vii</h2>
+      <p>Bucătărie mediteraneană, cu acoperiș retractabil: lumina și priveliștea devin parte din masă.</p>
+    </div>
+  </section>
+
+  <section class="ecran" id="gust">
+    <img class="foto" loading="lazy" src="poze/preparat.jpg" alt="Scoici Saint-Jacques cu icre și verdețuri, pe sos galben">
+    <div class="continut">
+      <div class="et">Chef Nico Lontras</div>
+      <h2>Respect pentru ingredient</h2>
+      <ul class="lista">
+        <li>Chef’s table</li><li>Food &amp; wine pairing</li><li>Meniu surpriză</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="ecran" id="bar">
+    <img class="foto" loading="lazy" src="poze/bar-1925.jpg" alt="Salon cu lambriuri de lemn, candelabru din coarne și canapele în carouri">
+    <div class="continut">
+      <div class="et">1925 English Bar</div>
+      <h2>Whisky, trabucuri și conversații lungi</h2>
+      <p>Un spațiu eclectic, unde eleganța clasică se întâlnește cu povești și tradiții.</p>
+    </div>
+  </section>
+
+  <section class="ecran" id="vin">
+    <img class="foto" loading="lazy" src="poze/picnic-vie.jpg" alt="Coș de picnic cu vin și pahare de rosé, între rândurile de vie">
+    <div class="continut">
+      <div class="et">Ținutul vinului</div>
+      <h2>Vinul casei, băut chiar între vii</h2>
+      <ul class="lista">
+        <li>Degustări de vinuri</li><li>Tur al podgoriilor</li><li>Picnic în vie</li><li>Degustări de cognac</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="ecran" id="evenimente">
+    <img class="foto" loading="lazy" src="poze/eveniment-flori.jpg" alt="Mese lungi aranjate pentru un eveniment, sub stâlpi acoperiți cu flori" style="object-position:32% 50%">
+    <div class="continut">
+      <div class="et">Evenimente</div>
+      <h2>Șase locații pentru momentele importante</h2>
+      <ul class="lista">
+        <li>Nunți</li><li>Botezuri</li><li>Evenimente în aer liber</li><li>Conferințe</li><li>Team building</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="ecran" id="contact">
+    <img class="foto" loading="lazy" src="poze/nunta-apus.jpg" alt="Miri pe o alee de piatră, privind apusul peste dealuri" style="object-position:50% 20%">
+    <div class="continut">
+      <div class="et">Florica Romalo 4, Chițorani, Prahova</div>
+      <h2>Ne vedem între vii</h2>
+      <div class="tele">
+        <a href="tel:+40723682568"><span>Cazare</span><b>0723 682 568</b></a>
+        <a href="tel:+40740248771"><span>Restaurante</span><b>0740 248 771</b></a>
+        <a href="tel:+40753588588"><span>Spa</span><b>0753 588 588</b></a>
+      </div>
+      <p class="nota">Prezentare demonstrativă, neoficială. Fotografii și informații de pe <a href="https://casatimis.ro/">casatimis.ro</a>.</p>
+    </div>
+  </section>
+</main>
+
+<nav aria-label="Secțiuni">
+  <a href="#acasa" class="activ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7M6 9.5V20h12V9.5"/></svg>Acasă</a>
+  <a href="#bungalow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18v-6a2 2 0 012-2h14a2 2 0 012 2v6M3 16h18M3 19v-3M21 19v-3M6 10V7a1 1 0 011-1h10a1 1 0 011 1v3"/></svg>Cazare</a>
+  <a href="#spa"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20c-5 0-8-3-9-7 3 0 5 1 6 2-1-3 0-7 3-10 3 3 4 7 3 10 1-1 3-2 6-2-1 4-4 7-9 7z"/></svg>Spa</a>
+  <a href="#veranda"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8l1 6a5 5 0 01-10 0l1-6zM12 14v7M8.5 21h7"/></svg>Restaurante</a>
+  <a href="#evenimente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l2.3 4.8 5.2.7-3.8 3.7.9 5.3-4.6-2.5-4.6 2.5.9-5.3L4.5 9.5l5.2-.7L12 4z"/></svg>Evenimente</a>
+</nav>
+</div>
+<script>
+(function(){
+  var main=document.getElementById('ecrane'), linkuri=[].slice.call(document.querySelectorAll('nav a'));
+  // Fiecare ecran aprinde fila secțiunii din care face parte.
+  var grup={acasa:'acasa',domeniul:'acasa',bungalow:'bungalow',camere:'bungalow',spa:'spa',piscina:'spa',veranda:'veranda',gust:'veranda',bar:'veranda',vin:'veranda',evenimente:'evenimente',contact:'evenimente'};
+  linkuri.forEach(function(a){a.addEventListener('click',function(e){
+    e.preventDefault();
+    var t=document.querySelector(a.getAttribute('href'));
+    var calm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+    main.scrollTo({top:t.offsetTop,behavior:calm?'auto':'smooth'});
+  })});
+  var obs=new IntersectionObserver(function(intrari){intrari.forEach(function(i){
+    if(!i.isIntersecting)return;
+    linkuri.forEach(function(a){a.classList.toggle('activ',a.getAttribute('href')==='#'+grup[i.target.id])});
+  })},{root:main,threshold:.6});
+  [].forEach.call(document.querySelectorAll('.ecran'),function(s){obs.observe(s)});
+})();
+</script>
+</body>
+</html>
